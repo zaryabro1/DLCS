@@ -1,0 +1,138 @@
+@font-face {
+	font-family: 'Apercu';
+	src: url('Apercu-Mono.woff2') format('woff2'),
+		 url('Apercu-Mono.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'lazer84';
+    src: url('lazer84.woff2') format('woff2'),
+        url('lazer84.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VCROSDMono';
+    src: url('VCROSDMono.woff2') format('woff2'),
+        url('VCROSDMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GreatVibes-Regular';
+    src: url('GreatVibes-Regular.woff2') format('woff2'),
+        url('GreatVibes-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('Roboto-Regular.woff2') format('woff2'),
+        url('Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('Roboto-Bold.woff2') format('woff2'),
+        url('Roboto-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('Roboto-Black.woff2') format('woff2'),
+        url('Roboto-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CACPinafore';
+    src: url('CACPinafore.woff2') format('woff2'),
+        url('CACPinafore.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adrippingmarker';
+    src: url('adrippingmarker.woff2') format('woff2'),
+        url('adrippingmarker.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FairProsper';
+    src: url('FairProsper.woff2') format('woff2'),
+        url('FairProsper.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Summer85';
+    src: url('Summer85.woff2') format('woff2'),
+        url('Summer85.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Yantramanav-Thin';
+    src: url('Yantramanav-Thin.woff2') format('woff2'),
+        url('Yantramanav-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yantramanav-Light';
+    src: url('Yantramanav-Light.woff2') format('woff2'),
+        url('Yantramanav-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yantramanav-Regular';
+    src: url('Yantramanav-Regular.woff2') format('woff2'),
+        url('Yantramanav-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yantramanav-Medium';
+    src: url('Yantramanav-Medium.woff2') format('woff2'),
+        url('Yantramanav-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Yantramanav-Bold';
+    src: url('Yantramanav-Bold.woff2') format('woff2'),
+        url('Yantramanav-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yantramanav-Black';
+    src: url('Yantramanav-Black.woff2') format('woff2'),
+        url('Yantramanav-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

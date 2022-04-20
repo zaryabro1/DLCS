@@ -1,0 +1,335 @@
+/*
+
+*/
+
+
+/* ====== Begin Boilerplate CSS ====== */
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff; /* Color you see during overscroll */
+    font-size: 62.5%; /* makes rem = px size */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Yantramanav-Regular';
+    min-height: 100%;
+    /*height: 100%;*/
+    color: #000;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+p, li, span { margin: 0; line-height: 1.5; }
+
+a { outline: 0; text-decoration: none; }
+
+a:link { text-decoration: none; color: #000; }
+a:visited { text-decoration: none; color: #000; }
+/*a:focus { outline: 1px dotted #444; }*/
+a:hover { text-decoration: none; color: #000; }
+a:active { text-decoration: none; color: #000; }
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+html > * { font-size: 1.4rem; }
+
+.table-table {
+    position: relative;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.table-cell {
+    position: relative;
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.breaker {
+    position: relative;
+    display: block;
+    height: 0;
+}
+
+.aspect-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.aspect-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.aspect-239-1 {
+    position: relative;
+    display: block;
+    padding-top: 41.84%;
+}
+
+.aspect-16-9 {
+    position: relative;
+    display: block;
+    padding-top: 56.25%;
+}
+
+.aspect-3-2 {
+    position: relative;
+    display: block;
+    padding-top: 66.666%;
+}
+
+.aspect-4-3 {
+    position: relative;
+    display: block;
+    padding-top: 75%;
+}
+
+.aspect-6-5 {
+    position: relative;
+    display: block;
+    padding-top: 83.333%;
+}
+
+.aspect-1-1 {
+    position: relative;
+    display: block;
+    padding-top: 100%;
+}
+
+.aspect-biz-card {
+    position: relative;
+    display: block;
+    padding-top: 57.14%;
+}
+
+.stay-down-wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+.stay-down-content {
+    /* padding-bottom: [height of footer]; */
+}
+
+.stay-down-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* height: [height of footer]; */
+}
+
+.page-curtain {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    /*transition: opacity 2.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);*/
+    /*transition: opacity 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);*/
+    transition: opacity 0.5s ease-in-out;
+    z-index: 999;
+}
+
+body.loaded .page-curtain {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.vh-landing video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 101%;
+    min-height: 101%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .vh-landing video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .vh-landing video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+
+/* ====== Begin Custom CSS ====== */
+
+body {
+    text-align: center;
+}
+
+.vh-landing {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    padding: 64px 16px;
+    background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+}
+.landing-card {
+    max-width: 480px;
+    margin: 0 auto;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: visible;
+
+}
+.landing-card .aspect-content {
+    padding: 22.5%;
+
+}
+.landing-bg-logo {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/dlcs-logo.svg) no-repeat center / contain;
+}
+
+.standby {
+    position: absolute;
+    width: 100%;
+    right: 50%;
+    bottom: -16%;
+    transform: translateX(50%);
+    font-family: 'VCROSDMono';
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #fff;
+}
+.standby:link,
+.standby:visited,
+.standby:hover,
+.standby:active {
+    color: #fff;
+}
+
+.footer {
+/*    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 64px;
+    background-color: #fff;
+}
+
+.footer span {
+    position: relative;
+    line-height: 18px;
+}
+
+.footer-cta {
+    position: relative;
+    transition: color 0.35s ease-in-out;
+}
+
+.link-underbar {
+    position: absolute;
+    bottom: 40%;
+    right: 50%;
+    transform: translateX(50%) rotate(-2.25deg);
+    height: 4px;
+    width: 0;
+    transition: width 0.25s ease-in;
+}
+
+.link-underbar-2 {
+    position: absolute;
+    bottom: 40%;
+    right: 50%;
+    transform: translateX(50%) rotate(4deg);
+    height: 4px;
+    width: 0;
+    transition: width 0.25s ease-in;
+}
+
+.footer-cta:hover .link-underbar,
+.footer-cta:active .link-underbar {
+    width: 100%;
+    transition: width 0.25s ease-in;
+}
+
+.footer-cta:hover .link-underbar-2,
+.footer-cta:active .link-underbar-2 {
+    width: 95%;
+    transition: width 0.25s ease-in 0.125s;
+}
+
+
+
+
+
+/* ====== Animations ====== */
+
+.fade-in-up {
+    opacity: 0;
+    will-change: transform;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+    transition: opacity 0.75s ease-in-out, transform 0.75s ease;
+}
+
+.fade-in-up.activate,
+.activate .fade-in-up {
+    opacity: 1;
+    will-change: transform;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* ====== Media Queries ====== */
+
+
