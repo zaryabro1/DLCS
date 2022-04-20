@@ -22,7 +22,7 @@ Route::get('/card', function () {
 })->name('Card');
 //Route::get('/register', 'App\Http\Controllers\UserController@import')->name('Register');
 Route::get('/register', function(){
-    return view('register');
+    return view('register', ['registerFailed' => false]);
 })->name('Register');
 Route::get('/login', function(){
     if (Auth::check()){

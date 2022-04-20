@@ -24,15 +24,24 @@ class UserController extends Controller
     /**
      * This function is used to register user
      * @* @param Request $request
-     * @* @return redirect index
+     * @* @return redirect
+     * @* @return view
      */
     public function registerUser(Request $request){
-        $user = new User;
-        $user->email = $request->email;
-        $user->user_name = $request->username;
-        $user->name = $request->name;
-        $user->password = bcrypt($request->password);
-        $user->save();
+        try {
+            $user = new User;
+            $user->email = $request->email;
+            $user->user_name = $request->username;
+            $user->name = $request->name;
+            $user->password = bcrypt($request->password);
+            $user->save();
+        } catch (Exception $ex) {
+            if ($ex->getCode() == 23000) {
+                $registerFailed = true;
+                return view('register', ['registerFailed' => $registerFailed]);
+            }
+        }
+        
 
         $user_profile = new User_profile;
         $user_profile->user_id = $user->id;

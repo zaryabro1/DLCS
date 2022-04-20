@@ -11,6 +11,7 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         input[type="submit"]:disabled {
   background: #dddddd;
@@ -51,6 +52,11 @@
                         <div class="form-group">
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
                         </div>
+                        @if ($registerFailed)
+                        <div class="alert alert-danger" role="alert" id="register-alert">
+                            Registeration Failed (Try another username and email)
+                        </div>
+                        @endif
                     </form>
                     <p class="loginhere">
                         Have already an account ? <a href="/login" class="loginhere-link">Login here</a>
@@ -66,7 +72,11 @@
     <script src="{{ asset('js/main.js') }}"></script>
     <script>
         $(document).ready(function(){
-            $("#submit").prop('disabled', true);
+            if($("#agree-term").is(':checked')) {
+                $("#submit").prop('disabled', false);
+            } else {
+                $("#submit").prop('disabled', true);
+            }
         });
         $('#agree-term').on('change', function() {
             if($("#agree-term").is(':checked')) {
@@ -75,6 +85,31 @@
                 $("#submit").prop('disabled', true);
             }
             
+        });
+        $( "#email" ).click(function() {
+            $( "#register-alert" ).fadeOut( 3000, function() {
+                 // Animation complete.
+            });
+        });
+        $( "#password" ).click(function() {
+            $( "#register-alert" ).fadeOut( 3000, function() {
+                 // Animation complete.
+            });
+        });
+        $( "#name" ).click(function() {
+            $( "#register-alert" ).fadeOut( 3000, function() {
+                 // Animation complete.
+            });
+        });
+        $( "#username" ).click(function() {
+            $( "#register-alert" ).fadeOut( 3000, function() {
+                 // Animation complete.
+            });
+        });
+        $( "#re_password" ).click(function() {
+            $( "#register-alert" ).fadeOut( 3000, function() {
+                 // Animation complete.
+            });
         });
            
     </script>
