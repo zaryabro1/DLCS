@@ -12,4 +12,9 @@ class Link extends Model
     //User->userType->role
     //protected $table = 'blog_table';
     // protected $fillable = ['Author'];
+
+    public function link()
+    {
+        return $this->belongsTo(User_profile::class);
+    }
 }

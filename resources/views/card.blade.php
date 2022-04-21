@@ -24,6 +24,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     {{ URL::asset('fonts/fonts.css') }}
     <link rel='stylesheet' href="{{ URL::asset('fonts/fonts.css') }}<?php /* echo time(); */ ?>"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel='stylesheet' href="{{ asset('css/normalize.css') }}" />
     {{ asset('js/vendor/Coloris-main/dist/coloris.min.css') }}
     <link rel='stylesheet' href="{{ asset('js/vendor/Coloris-main/dist/coloris.min.css') }}"/>
@@ -131,10 +132,10 @@
                 <h2>Add Link</h2>
                 <form method="POST" action="{{action('App\Http\Controllers\UserController@addLink')}}" enctype="multipart/form-data" style="margin-top:10px; margin-bottom:10px">
                     {{csrf_field()}}
-                    <input name="LinkName" placeholder="Link Name"/>
-                    <input name="FirstLetter" placeholder="First Letter"/>
-                    <input name="Description" placeholder="Description"/>
-                    <input name="Url" placeholder="Url"/>
+                    <input name="LinkName" placeholder="Link Name" required/>
+                    <input name="FirstLetter" placeholder="First Letter" required/>
+                    <input name="Description" placeholder="Description" required/>
+                    <input name="Url" placeholder="Url" required/>
                     <button type="submit" style="margin-top:5px">Add Link</button>
                 </form>
             @endif
@@ -149,8 +150,8 @@
             @if ($editable)
                 <form method="POST" action="{{action('App\Http\Controllers\UserController@uploadFile')}}" enctype="multipart/form-data">
                     {{csrf_field()}}
-                    <input type="file" name="file"/>
-                    <button type="submit">Upload Image</button>
+                    <input type="file" name="file" id="fileForUpload"/>
+                    <button type="submit" id="upload-button" class="btn btn-primary">Upload Image</button>
                 </form>
             @endif
 
@@ -197,7 +198,24 @@
             var selectedClass = document.getElementById('title-font');
             fontClassName = selectedClass.options[selectedClass.selectedIndex].value;
             document.body.classList.add(fontClassName);
+            
+            if( document.getElementById("fileForUpload").files.length == 0 ){
+                $("#upload-button").hide();
+            } else {
+                $("#upload-button").show(200);
+            }
         });
+
+ 
+        $('#fileForUpload').on('change', function() {
+            if( document.getElementById("fileForUpload").files.length == 0 ){
+                $("#upload-button").hide();
+            } else {
+                $("#upload-button").show(200);
+            }
+        });
+ 
+    
            
         $('#title-font').on('change', function() {
             document.body.classList.remove(fontClassName);

@@ -67,5 +67,17 @@ class UserRepository
             return false;
         }
     }
+
+    public function userAlreadyExists($username, $email){
+        $userExists = false;
+        
+        $allUsers = $this->getAllUsers();
+        foreach ($allUsers as $user){
+            if ($user->user_name == $username || $user->email == $email){
+                $userExists = true;
+            }
+        }
+        return $userExists;
+    }
 }
 

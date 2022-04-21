@@ -172,4 +172,13 @@ class UserController extends Controller
 
         return redirect(route('Home'));
     }
+
+    //testing lazy loading
+    public function test(){
+        // return User::with('user_profile')->find(13)->link;
+        // return User_profile::where('user_id', 13)->first();
+        return User::where('id', 13)->first()->user_profile->links;
+        // return  User_profile::with('Links', 'Files')->where('user_id', 13)->first();
+
+    }
 }

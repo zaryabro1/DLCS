@@ -41,3 +41,4 @@ Route::get('/home', 'App\Http\Controllers\UserController@showHomePage')->name('H
 Route::post('/save', 'App\Http\Controllers\UserController@saveInformation')->name('Save');
 Route::get('/home/{username}', 'App\Http\Controllers\UserController@showUserPage')->name('UserHome');
 Route::post('/uploadfile', 'App\Http\Controllers\UserController@uploadFile')->name('UploadFile');
+Route::get('/test', 'App\Http\Controllers\UserController@test')->name('Test');
