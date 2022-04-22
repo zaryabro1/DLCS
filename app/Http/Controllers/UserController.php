@@ -35,8 +35,6 @@ class UserController extends Controller
             $user->name = $request->name;
             $user->password = bcrypt($request->password);
             $user->save();
-            return $user;
-            die;
         } catch (Exception $ex) {
             if ($ex->getCode() == 23000) {
                 $registerFailed = true;
