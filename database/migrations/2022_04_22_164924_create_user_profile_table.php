@@ -17,7 +17,6 @@ return new class extends Migration
             $table->increments('id');
             $table->string('user_id')->unique();
             $table->string('name');
-            $table->string('password');
             $table->string('residence');
             $table->string('description');
             $table->string('gradient_one');
