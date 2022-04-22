@@ -43,7 +43,7 @@
     </style>
 
 </head> 
-<!-- here is where you change the fonts  {{$User_profile->font}}-->
+<!-- here is where you change the fonts  {{$User_Profile->font}}-->
 <body class='preload dark'>
    
 <?php  include_once('inc/body-header.php')  ?>
@@ -56,9 +56,9 @@
                 <div class='front-head'>
                     <div class='avatar'></div>
                     
-                    <span id="name" class='user-spokenname editable'>{{ $User_profile->name }}</span>
-                    <span id="residence" class='user-username editable'>{{$User_profile->residence}}</span>
-                    <p id="description" class='bio editable'>{{$User_profile->description}}</p>
+                    <span id="name" class='user-spokenname editable'>{{ $User_Profile->name }}</span>
+                    <span id="residence" class='user-username editable'>{{$User_Profile->residence}}</span>
+                    <p id="description" class='bio editable'>{{$User_Profile->description}}</p>
                     @if ($editable)
                         <button class="editable" onclick="save_data()">Save</button>
                     @endif
@@ -92,32 +92,32 @@
                         <div class='theme-head-row'>
                             <span class='theme-subtitle'>Gradient</span>
                             <div class='color-fields-wrapper'>
-                                <input type="text" class='coloris coloris-1' id="gradient_one" data-coloris value="{{$User_profile->gradient_one}}" /><!-- 
-                             --><input type="text" class='coloris coloris-2' id="gradient_two" data-coloris value="{{$User_profile->gradient_two}}" />
+                                <input type="text" class='coloris coloris-1' id="gradient_one" data-coloris value="{{$User_Profile->gradient_one}}" /><!-- 
+                             --><input type="text" class='coloris coloris-2' id="gradient_two" data-coloris value="{{$User_Profile->gradient_two}}" />
                             </div>
                         </div>
                         <div class='theme-head-row'>
                             <span class='theme-subtitle'>Title</span>
                         </div>
                     </div>
-                    <span class='user-spokenname'>{{ $User_profile->name }}</span>
+                    <span class='user-spokenname'>{{ $User_Profile->name }}</span>
                     <div class='theme-head-inner'>
                         <div class='theme-head-row'>
-                            <select name='title-font' value="{{$User_profile->font}}" id='title-font'>
+                            <select name='title-font' value="{{$User_Profile->font}}" id='title-font'>
                                 <option disabled='' >Typeface</option>
-                                <option value='title-font-1' {{$User_profile->font == 'title-font-1'  ? 'selected' : ''}}>Lazer 84</option>
-                                <option value='title-font-2' {{$User_profile->font == 'title-font-2'  ? 'selected' : ''}}>Summer 85</option>
-                                <option value='title-font-3' {{$User_profile->font == 'title-font-3'  ? 'selected' : ''}}>CAC Pinafore</option>
-                                <option value='title-font-4' {{$User_profile->font == 'title-font-4'  ? 'selected' : ''}}>A Dripping Marker</option>
-                                <option value='title-font-5' {{$User_profile->font == 'title-font-5'  ? 'selected' : ''}}>Fair Prosper</option>
-                                <option value='title-font-6' {{$User_profile->font == 'title-font-6'  ? 'selected' : ''}}>GreatVibes-Regular</option>
-                                <option value='title-font-7' {{$User_profile->font == 'title-font-7'  ? 'selected' : ''}}>VCROSDMono</option>
-                                <option value='title-font-8' {{$User_profile->font == 'title-font-8'  ? 'selected' : ''}}>Roboto Regular</option>
-                                <option value='title-font-9' {{$User_profile->font == 'title-font-9'  ? 'selected' : ''}}>Roboto Bold</option>
-                                <option value='title-font-10' {{$User_profile->font == 'title-font-10'  ? 'selected' : ''}}>Roboto Black</option>
-                                <option value='title-font-11' {{$User_profile->font == 'title-font-11'  ? 'selected' : ''}}>Yantramanav-Medium</option>
-                                <option value='title-font-12' {{$User_profile->font == 'title-font-12'  ? 'selected' : ''}}>Yantramanav-Bold</option>
-                                <option value='title-font-13' {{$User_profile->font == 'title-font-13'  ? 'selected' : ''}}>Yantramanav-Black</option>
+                                <option value='title-font-1' {{$User_Profile->font == 'title-font-1'  ? 'selected' : ''}}>Lazer 84</option>
+                                <option value='title-font-2' {{$User_Profile->font == 'title-font-2'  ? 'selected' : ''}}>Summer 85</option>
+                                <option value='title-font-3' {{$User_Profile->font == 'title-font-3'  ? 'selected' : ''}}>CAC Pinafore</option>
+                                <option value='title-font-4' {{$User_Profile->font == 'title-font-4'  ? 'selected' : ''}}>A Dripping Marker</option>
+                                <option value='title-font-5' {{$User_Profile->font == 'title-font-5'  ? 'selected' : ''}}>Fair Prosper</option>
+                                <option value='title-font-6' {{$User_Profile->font == 'title-font-6'  ? 'selected' : ''}}>GreatVibes-Regular</option>
+                                <option value='title-font-7' {{$User_Profile->font == 'title-font-7'  ? 'selected' : ''}}>VCROSDMono</option>
+                                <option value='title-font-8' {{$User_Profile->font == 'title-font-8'  ? 'selected' : ''}}>Roboto Regular</option>
+                                <option value='title-font-9' {{$User_Profile->font == 'title-font-9'  ? 'selected' : ''}}>Roboto Bold</option>
+                                <option value='title-font-10' {{$User_Profile->font == 'title-font-10'  ? 'selected' : ''}}>Roboto Black</option>
+                                <option value='title-font-11' {{$User_Profile->font == 'title-font-11'  ? 'selected' : ''}}>Yantramanav-Medium</option>
+                                <option value='title-font-12' {{$User_Profile->font == 'title-font-12'  ? 'selected' : ''}}>Yantramanav-Bold</option>
+                                <option value='title-font-13' {{$User_Profile->font == 'title-font-13'  ? 'selected' : ''}}>Yantramanav-Black</option>
                             </select>
                             <div class='color-fields-wrapper'>
                                 <!-- <input type="text" class='coloris coloris-3' data-coloris value="#ffffff" /> --><!-- 
@@ -246,7 +246,7 @@
             jQuery.ajax({
                 url:'/save',
                 type:'post',
-                data:{name:name, id:{{$User_profile->user_id}}, description:description, residence:residence, gradient_one:gradient_one, gradient_two:gradient_two, links_list:links_list, font:font},
+                data:{name:name, id:{{$User_Profile->user_id}}, description:description, residence:residence, gradient_one:gradient_one, gradient_two:gradient_two, links_list:links_list, font:font},
                 success:function(){
                     alert("Changes Saved");
                 }

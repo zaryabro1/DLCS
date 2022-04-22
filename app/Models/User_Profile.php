@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 
 
-class User_profile extends Model
+class User_Profile extends Model
 {
    protected $table = 'user_profile'; 
    public $timestamps = false;
@@ -17,7 +17,7 @@ class User_profile extends Model
    public function Files(){
        return $this->hasMany(File::class, "user_id", "user_id");
    }
-   
+
     //User->userType->role
     //protected $table = 'blog_table';
     // protected $fillable = ['Author'];

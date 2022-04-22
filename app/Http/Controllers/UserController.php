@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\User_profile;
+use App\Models\User_Profile;
 use App\Models\File;
 use App\Models\Link;
 use Illuminate\Http\Request;
@@ -43,7 +43,7 @@ class UserController extends Controller
         }
         
 
-        $user_profile = new User_profile;
+        $user_profile = new User_Profile;
         $user_profile->user_id = $user->id;
         $user_profile->name = $user->name;
         $user_profile->residence = "FOUNDER, KITTYLANDs";
@@ -105,11 +105,11 @@ class UserController extends Controller
     public function showHomePage(){
         if ($this->isUserLoggedIn()){
             $user = $this->loggedInUserDetail();
-            $User_profile = $this->userRepository->getUserProfile($user->id);
+            $User_Profile = $this->userRepository->getUserProfile($user->id);
             $files = $this->userRepository->getUserProfile($user->id)->files;
             $links = $this->userRepository->getUserProfile($user->id)->links;
             
-            return view('card', ['User_profile' => $User_profile, 'editable' => true, 'files' => $files, 'links' => $links]);
+            return view('card', ['User_Profile' => $User_Profile, 'editable' => true, 'files' => $files, 'links' => $links]);
         } else {
             return redirect(route('Login'));
         }
@@ -138,11 +138,11 @@ class UserController extends Controller
             if (!$userid){
                 return view("Error");
             }
-            $User_profile = $this->userRepository->getUserProfile($userid);
+            $User_Profile = $this->userRepository->getUserProfile($userid);
             $files = $this->userRepository->getUserProfile($userid)->files;
             $links = $this->userRepository->getUserProfile($userid)->links;
         
-            return view('card', ['User_profile' => $User_profile, 'editable' => false, 'files' => $files, 'links' => $links]);
+            return view('card', ['User_Profile' => $User_Profile, 'editable' => false, 'files' => $files, 'links' => $links]);
         }
     }
 
@@ -176,9 +176,9 @@ class UserController extends Controller
     //testing lazy loading
     public function test(){
         // return User::with('user_profile')->find(13)->link;
-        // return User_profile::where('user_id', 13)->first();
+        // return User_Profile::where('user_id', 13)->first();
         return User::where('id', 13)->first()->user_profile->links;
-        // return  User_profile::with('Links', 'Files')->where('user_id', 13)->first();
+        // return  User_Profile::with('Links', 'Files')->where('user_id', 13)->first();
 
     }
 }

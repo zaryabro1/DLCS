@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\User;
-use App\Models\User_profile;
+use App\Models\User_Profile;
 use App\Models\File;
 use App\Models\Link;
 use Illuminate\Http\Request;
@@ -17,11 +17,11 @@ class UserRepository
     }
 
     public function getUserProfile($id){
-        return  User_profile::with('Links', 'Files')->where('user_id', $id)->first();
+        return  User_Profile::with('Links', 'Files')->where('user_id', $id)->first();
     }
 
     public function updateUserProfile(Request $request){
-        User_profile::where("user_id", $request->id)
+        User_Profile::where("user_id", $request->id)
         ->update([
             "name" => $request->name,
             "description" => $request->description,

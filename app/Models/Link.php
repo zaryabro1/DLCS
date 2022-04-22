@@ -15,6 +15,6 @@ class Link extends Model
 
     public function link()
     {
-        return $this->belongsTo(User_profile::class);
+        return $this->belongsTo(User_Profile::class);
     }
 }
